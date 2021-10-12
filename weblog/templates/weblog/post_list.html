@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>La liste des posts</title>
+    </head>
+    <body>
+        <h1>Toute les posts</h1>
+        {% for post in post_list %}
+        <ul>
+            <li>Author:
+                {% for author in post.get_authors %}
+                <ul>
+                    <li>{{ author.name }}</li>
+                </ul>
+                {% endfor %}
+            </li>
+            <li>Titre: {{post.title }}</li>
+            <li>Sous titre: {{post.subtitle }}</li>
+            <li> categories:
+                {% for category in post.get_categories %}
+                <ul>
+                    <li>{{ category.name }}</li>
+                </ul>
+                {% endfor %}
+            </li>
+            <li>
+               <p>{{ post.content }}</p>
+            </li>
+        </ul>
+        {% endfor %}
+    </body>
+</html>
