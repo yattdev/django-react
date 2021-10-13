@@ -20,8 +20,12 @@ from django.conf.urls.static import static
 #  from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
+    # Django admin, TODO: change urls from /admin to /${more_complicate}
     path('admin/', admin.site.urls),
-    #  path('', include('weblog.urls')),
+
+    #User management
+    path('accounts/', include('django.contrib.auth.urls')),
+
     # Local app urls
     path('', include('blog.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
