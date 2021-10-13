@@ -60,6 +60,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'storages',
     'rest_framework',  # new
+    'allauth',
+    'allauth.account',
 
     # local
     'blog',
