@@ -62,8 +62,10 @@ INSTALLED_APPS = [
     'rest_framework',  # new
 
     # local
-    'weblog',
+    'blog',
 ]
+
+AUTH_USER_MODEL = 'blog.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

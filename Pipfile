@@ -32,6 +32,8 @@ stone = "==3.2.1"
 urllib3 = "==1.26.7"
 Django = "==3.2.7"
 Pillow = "==8.3.2"
+coverage = "*"
+environ = {extras = ["django"], version = "*"}
 
 [dev-packages]
 
